@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TEYX0P/yepOAoRm5ROD8ljV7hnBm78Ew9wUBY3pZGPQltG51hksjxDDzO6F5epb+Ixs1Y6qggn6zMguiMq6GwA==",
+  "dgSpecHash": "PwcfFcSCNMR6DuMKHIgeIQbFEJZQGtZCmSLvNUq0dtDzfk4dyIul4JX2N3LDBlePyLyjJlQbpEfIYGjGFPypYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zkozm\\OneDrive\\Documents\\GitHub\\2018-sep-2021-a02-exercise-zaxmo\\WebAppRazorDemo\\WebAppRazorDemo\\WebAppRazorDemo.csproj",
+  "projectFilePath": "C:\\Users\\zkozm\\OneDrive\\Documents\\GitHub\\DMIT2018-Workbook\\WebAppRazorDemo\\WebAppRazorDemo\\WebAppRazorDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zkozm\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\zkozm\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.9\\microsoft.aspnetcore.cryptography.internal.5.0.9.nupkg.sha512",

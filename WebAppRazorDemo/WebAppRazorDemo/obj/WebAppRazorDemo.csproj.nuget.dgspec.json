@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zkozm\\OneDrive\\Documents\\GitHub\\2018-sep-2021-a02-exercise-zaxmo\\WebAppRazorDemo\\WebAppRazorDemo\\WebAppRazorDemo.csproj": {}
+    "C:\\Users\\zkozm\\OneDrive\\Documents\\GitHub\\DMIT2018-Workbook\\WebAppRazorDemo\\WebAppRazorDemo\\WebAppRazorDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zkozm\\OneDrive\\Documents\\GitHub\\2018-sep-2021-a02-exercise-zaxmo\\WebAppRazorDemo\\WebAppRazorDemo\\WebAppRazorDemo.csproj": {
+    "C:\\Users\\zkozm\\OneDrive\\Documents\\GitHub\\DMIT2018-Workbook\\WebAppRazorDemo\\WebAppRazorDemo\\WebAppRazorDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zkozm\\OneDrive\\Documents\\GitHub\\2018-sep-2021-a02-exercise-zaxmo\\WebAppRazorDemo\\WebAppRazorDemo\\WebAppRazorDemo.csproj",
+        "projectUniqueName": "C:\\Users\\zkozm\\OneDrive\\Documents\\GitHub\\DMIT2018-Workbook\\WebAppRazorDemo\\WebAppRazorDemo\\WebAppRazorDemo.csproj",
         "projectName": "WebAppRazorDemo",
-        "projectPath": "C:\\Users\\zkozm\\OneDrive\\Documents\\GitHub\\2018-sep-2021-a02-exercise-zaxmo\\WebAppRazorDemo\\WebAppRazorDemo\\WebAppRazorDemo.csproj",
+        "projectPath": "C:\\Users\\zkozm\\OneDrive\\Documents\\GitHub\\DMIT2018-Workbook\\WebAppRazorDemo\\WebAppRazorDemo\\WebAppRazorDemo.csproj",
         "packagesPath": "C:\\Users\\zkozm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zkozm\\OneDrive\\Documents\\GitHub\\2018-sep-2021-a02-exercise-zaxmo\\WebAppRazorDemo\\WebAppRazorDemo\\obj\\",
+        "outputPath": "C:\\Users\\zkozm\\OneDrive\\Documents\\GitHub\\DMIT2018-Workbook\\WebAppRazorDemo\\WebAppRazorDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
