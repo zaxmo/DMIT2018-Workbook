@@ -1,0 +1,29 @@
+﻿@page "{theInput?}"
+@model WebApp.Pages.BasicDataMovementModel
+@{      
+    ViewData["Title"] = "Basic Movement"; //title for your browser tag
+}
+<h1>Basic Data Movement</h1>
+
+@if (!string.IsNullOrWhiteSpace(Model.MyName))
+{ 
+    <p style="color:firebrick; font-weight:bold;">@Model.MyName</p>
+}
+else
+{
+    <p>The random number is odd.</p>
+}
+
+<form method="post">
+    <label>
+        Enter a number
+        <input type="text" asp-for="theInput" />
+    </label>
+    <button type="submit" value="A" id="theButton" name="TheButton"
+            asp-page-handler="AButton">A Button</button>
+    &nbsp;&nbsp;
+    <button type="submit" value="B" id="theButton" name="TheButton"
+            asp-page-handler="BButton">B Button</button>
+    <br/><br/>
+    <p style="color:green; font-weight:bold;">@Model.FeedBackMessage</p>
+</form>

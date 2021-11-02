@@ -1,0 +1,11 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <h1 class="display-4">
+    <img src="~/img/ChinookMusic.jpg" alt="Chinook Music image" />
+    Welcome</h1>
+    <p>Version: @Model.DbVersion.Version  Released: @Model.DbVersion.ReleaseDate</p>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>

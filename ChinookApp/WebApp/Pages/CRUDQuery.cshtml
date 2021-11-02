@@ -1,0 +1,67 @@
+﻿@page "{partialtitle?}"
+@model WebApp.Pages.CRUDQueryModel
+@{      
+    //this places a title on the browse page tab
+    ViewData["Title"] = "CRUD Album Query";
+}
+<h1>Albums by Title</h1>
+
+<form method="post">
+    <label>
+        Enter a partial album Title:
+        <input type="text" asp-for="partialtitle" placeholder="enter your album title" />
+    </label>
+    <button type="submit">Fetch</button>
+    <p style="color:firebrick; font-weight:bold;">@Model.FeedBackMessage</p>
+
+    @if (Model.Albums != null)
+    {
+        if (Model.Albums.Count == 0)
+        {
+            <p style="color:blue; font-weight:bold;">No albums found on file for search.</p>
+
+        }
+        else
+        {
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Albums)
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td>@item.ReleaseYear</td>
+                            <td>@item.ReleaseLabel</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr colspan="3">
+                        <td>
+                            @{
+                                foreach (var pageRef in Model.Pager)
+                                {
+                                    if (pageRef == Model.Pager.CurrentPage) // I can use the == because of PageRef type being a C# 9 record type
+                                    {
+                                        <b>@pageRef.Text</b>
+                                    }
+                                    else
+                                    {
+                                        <a title="Page @pageRef.Page" asp-page="/AlbumListTableQuery"
+                                           asp-route-currentpage="@pageRef.Page">@pageRef.Text</a>
+                                    }
+                                }
+                            }
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        }
+    }
+</form>

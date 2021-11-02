@@ -1,0 +1,34 @@
+﻿@page "{albumid?}"
+@model WebApp.Pages.AlbumQueryModel
+@{
+}
+<h1>Album Query</h1>
+
+<form method="post">
+    <label>
+        Enter an album id: <input type="number" asp-for="albumid" />
+    </label>
+    <button type="submit">Search</button>
+
+    <p style="color:firebrick; font-weight:bold;">@Model.FeedBackMessage</p>
+
+    @if(Model.albumid.HasValue)
+    {
+        if(Model.Album == null)
+        {
+            <p>The album id entered does not exist.</p>
+        }
+        else
+        {
+            <p>Album ID: @Model.Album.AlbumId</p>
+            <p>Title: @Model.Album.Title</p>
+            <p>Artist ID: @Model.Album.ArtistId</p>
+            <p>Year: @Model.Album.ReleaseYear</p>
+            <p>Label: @Model.Album.ReleaseLabel</p>
+        }
+    }
+    else
+    {
+        <p>To display an album you need to enter the album id.</p>
+    }
+</form>

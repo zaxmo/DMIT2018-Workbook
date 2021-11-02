@@ -1,0 +1,78 @@
+﻿@page "{genreid?}"
+@model WebApp.Pages.AlbumListTableQueryModel
+@{
+}
+<h1>Albums for Genres</h1>
+
+<form method="post">
+    <label>
+        Select a genre to view genre albums:
+        <select asp-for="genreid">
+            <option value="0">select ...</option>
+            @foreach (var item in Model.Genres)
+            {
+                if (Model.genreid == item.ValueField)
+                {
+                    <option value="@item.ValueField" selected>@item.DisplayField</option>
+                }
+                else
+                {
+                    <option value="@item.ValueField">@item.DisplayField</option>
+                }
+            }
+        </select>
+    </label>
+    <button type="submit">Fetch</button>
+    <p style="color:firebrick; font-weight:bold;">@Model.FeedBackMessage</p>
+
+    @if (Model.Albums != null)
+    {
+        if (Model.Albums.Count == 0)
+        {
+            <p style="color:blue; font-weight:bold;">This genre has no albums on file.</p>
+
+        }
+        else
+        {
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Year</th>
+                        <th>Label</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Albums)
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td>@item.ReleaseYear</td>
+                            <td>@item.ReleaseLabel</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr colspan="3">
+                        <td>
+                            @{
+                                foreach (var pageRef in Model.Pager)
+                                {
+                                    if (pageRef == Model.Pager.CurrentPage) // I can use the == because of PageRef type being a C# 9 record type
+                                    {
+                                        <b>@pageRef.Text</b>
+                                    }
+                                    else
+                                    {
+                                        <a title="Page @pageRef.Page" asp-page="/AlbumListTableQuery"
+                                           asp-route-currentpage="@pageRef.Page">@pageRef.Text</a>
+                                    }
+                                }
+                            }
+                        </td>
+                    </tr>
+                 </tfoot>
+            </table>
+        }
+    }
+</form>
